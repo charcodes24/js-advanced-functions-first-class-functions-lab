@@ -3,9 +3,9 @@ const returnFirstTwoDrivers = (function(drivers) {
     return drivers.slice(0,2);
 }); 
 
-const returnLastTwoDrivers = (function(drivers) {
+const returnLastTwoDrivers = function(drivers) {
     return drivers.slice(drivers.length-2);
-});
+};
 
 let selectingDrivers = [
     returnFirstTwoDrivers,
@@ -16,9 +16,8 @@ function createFareMultiplier(num) {
     function multiplier(fare) {
         return fare * num;
     };
-    multiplier();
     return multiplier;
-}
+};
 
 /*const fareDoubler = fare => {
     const doubler = createFareMultiplier(2);
